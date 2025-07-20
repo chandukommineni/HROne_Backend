@@ -75,13 +75,3 @@ echo "DB_NAME=ecommerce" >> .env
 
 # Run server
 uvicorn app.main:app --reload 
-
-
-
-{
-  "items": [{
-    "productId": "123",
-    "size": "M",  // it is needed to check the quantity in inventory 
-    "qty": 2
-  }]
-}
