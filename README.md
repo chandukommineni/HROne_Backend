@@ -34,8 +34,8 @@ All orders currently deduct from the total quantity across all sizes. For precis
 
 ## API Documentation
 
-Interactive docs available at `/docs` or `/redoc` when deployed:
-- Swagger UI: `https://your-api-url/docs`
+
+- Swagger UI: `https://hrone-backend-5akl.onrender.com/docs`
 
 
 ## Endpoints
@@ -59,8 +59,7 @@ Interactive docs available at `/docs` or `/redoc` when deployed:
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/ecommerce-fastapi.git
-cd ecommerce-fastapi
+git clone https://github.com/chandukommineni/HROne_Backend.git
 
 # Set up virtual environment
 python -m venv venv
