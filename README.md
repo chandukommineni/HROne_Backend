@@ -14,6 +14,23 @@ A scalable ecommerce backend API with product catalog and order management, buil
 - **Database**
   - MongoDB Atlas integration
   - Optimized queries with indexing
+  - 
+## Inventory Management Note
+
+The current API specification doesn't account for product sizes when placing orders, though products are stored with size-specific quantities. 
+
+**Temporary Workaround**:  
+All orders currently deduct from the total quantity across all sizes. For precise size-wise inventory tracking, modify the order request format to include `size`:
+
+```json
+{
+  "items": [{
+    "productId": "123",
+    "size": "M",  // it is needed to check the quantity in inventory 
+    "qty": 2
+  }]
+}
+```
 
 ## API Documentation
 
@@ -62,15 +79,6 @@ uvicorn app.main:app --reload
 
 
 
-
-## Inventory Management Note
-
-The current API specification doesn't account for product sizes when placing orders, though products are stored with size-specific quantities. 
-
-**Temporary Workaround**:  
-All orders currently deduct from the total quantity across all sizes. For precise size-wise inventory tracking, modify the order request format to include `size`:
-
-```json
 {
   "items": [{
     "productId": "123",
